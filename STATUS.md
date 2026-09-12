@@ -1,49 +1,38 @@
-# SPECTRUM STATUS — 2026-09-12T04:45Z
+# SPECTRUM STATUS — 2026-09-12T23:05Z
 
-Sealed by Grok Build against live GitHub API. Claims below are verified or explicitly gated.
+Sealed against live GitHub + Stripe APIs.
 
 ## Identity
 
 - Owner: EvezArt (Steven Crawford-Maggard)
 - Public repos: 186
-- Newest HQ: `EvezArt/evez-spectrum` (created 2026-09-11T22:30:28Z)
+- HQ: `EvezArt/evez-spectrum`
 
-## Now boxes (ROADMAP.md)
+## Now boxes
 
-| Box | State | Blocker |
+| Box | State | Evidence |
 | --- | --- | --- |
-| Mint Stripe $1 lifetime paylink | OPEN | Requires Stripe product + live paylink. No Stripe product event verified this session. |
-| Publish evez-skills to ClawdHub (32) | OPEN | Catalog publish not verified on GitHub this session. |
-| Fix X poster cookie-route | OPEN | Distribution channel; no code change in spectrum tree. |
+| Mint Stripe $1 lifetime paylink | **TEST MODE DONE** | Product `prod_VFUy37dkMkNWUN` · Price `price_1UEzz7DBhYAyYlOhmFWkHRPF` ($1 USD one-time) · Payment link on EVEZ666 Syndicate **test** account. **Live paylink still required for real money.** |
+| Publish evez-skills to ClawdHub (32) | OPEN | Not verified this session |
+| Fix X poster cookie-route | OPEN | Not in spectrum tree |
 
-**Verdict:** Money loop is still a checkbox. Charter is real. Runtime is not.
+## CI progress
 
-## Open PRs that matter
+| PR | What | State |
+| --- | --- | --- |
+| [#64](https://github.com/EvezArt/openclaw-fork/pull/64) | autonomous.yml → ubuntu-latest | OPEN (partial) |
+| [#68](https://github.com/EvezArt/openclaw-fork/pull/68) | install-smoke / no-tabs / labeler → ubuntu-latest | **OPEN — full remaining RUNNER_LABEL kill** |
+| [#65](https://github.com/EvezArt/openclaw-fork/pull/65) | control plane | wait for green CI |
+| [#67](https://github.com/EvezArt/openclaw-fork/pull/67) | federation | wait for green CI |
 
-### `openclaw-fork`
+**Merge order:** #68 (and/or #64) → #65 → #67
 
-| PR | Title | State | Merge gate |
-| --- | --- | --- | --- |
-| [#64](https://github.com/EvezArt/openclaw-fork/pull/64) | Fix OpenClaw runtime workflow runner | OPEN | CI jobs fail in ~3s (health, install-smoke, label, no-tabs). Vercel: **Account is blocked.** Netlify mixed. Do not merge until hosted runners execute real steps. |
-| [#65](https://github.com/EvezArt/openclaw-fork/pull/65) | Control-plane foundation | OPEN | Substrate PR. Depends on healthy CI. |
-| [#67](https://github.com/EvezArt/openclaw-fork/pull/67) | NextClaw federation | OPEN | Truth gate + phone gateway. Checks: probe/contract/offline-swarm/no-tabs **failure**. Cubic review success. Merge only after contract green. |
+## Still blocked (human)
 
-### Other
+1. **Vercel account blocked** — cannot fix from GitHub API
+2. **Stripe live mode** — promote product/price/paylink to livemode when ready to take real $1s
+3. **ClawdHub + X cookie-route** — outside this API surface
 
-- `evez-autonomy-platform` #1 Fort Knox — OPEN, review-only by its own body (no merge authorization).
+## Product bar
 
-## Infrastructure contradictions (CAIN)
-
-1. **Vercel account blocked** — deploy status on openclaw-fork PRs: "Account is blocked." Production deploy path is dead until billing/account unlock.
-2. **evez-ssh-bridge** — private repo still present; description promised auto-delete after use; `websockify 8080 → 80.241.209.34:22` in devcontainer.
-3. **PR CI** — several jobs complete failure in under 5 seconds; runner assignment / workflow wiring is broken, not just test logic.
-
-## Merge order (when CI is green)
-
-1. #64 runner fix (unblocks health)
-2. #65 control plane
-3. #67 federation (builds on plane)
-
-## Product bar check
-
-Spectrum itself: 3 markdown files. Ships doctrine, not software. Next ship must be the $1 Stripe loop or a installable unit with a green CI path.
+Test money loop object exists. Live money loop does not. CI path is being repaired, not yet green.
