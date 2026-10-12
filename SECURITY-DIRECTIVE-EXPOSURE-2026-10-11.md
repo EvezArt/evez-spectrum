@@ -1,8 +1,8 @@
-# SECURITY DIRECTIVE: Public exposure of personal data in EvezArt/evez-ai — purge history
+# SECURITY DIRECTIVE: Public exposure of personal data in EvezArt/evez-ai — purge executed
 
 **Issued by:** Cipher (Base44 relay) — 2026-10-11
 **Priority:** CRITICAL — personal and family data published in a public repo
-**Status:** HEAD redacted (commit 5f4cdb9). HISTORY NOT YET PURGED.
+**Status:** HEAD redacted (commit 5f4cdb9, pre-rewrite). HISTORY PURGE EXECUTED 2026-10-11 by Cipher with owner authorization ("Yes do it"). SERVER-SIDE GC PENDING (see REMAINING STEP).
 
 ## What happened
 
@@ -17,67 +17,53 @@ repository containing sensitive personal and family information:
 - `evez-ecosystem/evezart-repos/evezart-openclaw/workspace/MEMORY.md`
   (personal contact email, Stripe account identifier, device details)
 
-## Done already (from Base44 relay, 2026-10-11)
+All five entered history in a single snapshot commit (408aa29, "13 NEW
+SERVERS") and existed on every branch.
 
-Commit `5f4cdb9` on `evez-ai/main` replaced all five files: the four
-family-info files are redaction stubs; the workspace file keeps operational
-data minus email / Stripe acct ID / device. No credential token patterns
-(sk-, ghp_, xox, AIza, JWT) were found in the five files — the exposure is
-personal data, not keys.
+## Purge executed (2026-10-11, by Cipher, owner-authorized)
 
-## Required: history purge (needs git credentials — OpenClaw or Steven)
+1. `git filter-repo --invert-paths` across ALL branches for the five paths.
+   42 commits rewritten; all other content, history shape, and tags preserved.
+2. Force-pushed: `main`, `fix/live-stats`, and all 3 dependabot branches.
+3. Branch protection on `main` was temporarily lifted for the force-push
+   (required-approval rule intact) and RESTORED immediately after
+   (verified: allow_force_pushes = false again).
+4. Closed the 3 open dependabot PRs (#3, #5, #6) — they pinned pre-rewrite trees.
+5. Full-history credential scan of the rewritten tree: NO live credentials.
+   - All `sk_live_` occurrences are placeholders (`sk_live_xxx`, `sk_live_...`) or a scanner keyword list.
+   - The only JWT in history is the standard jwt.io example token inside a logger redaction unit test.
+   - No ghp_/github_pat_/AIza/npm_/AKIA/private-key blobs anywhere in history.
+6. Post-purge tree state: only 3 MEMORY.md files remain, all verified non-sensitive (evez-platform, game-agent-infra, proactive-agent asset template).
 
-The files remain recoverable from git history until ALL refs are rewritten:
+## REMAINING STEP — requires STEVEN (account owner, web UI only)
 
-```bash
-pip install git-filter-repo
-git clone --mirror https://github.com/EvezArt/evez-ai.git
-cd evez-ai.git
+GitHub retains unreachable objects and serves them by SHA until server-side
+garbage collection. Old commit SHAs and raw URLs still resolve (HTTP 200)
+until GitHub Support runs GC and clears caches. Code search index will also lag.
 
-git filter-repo --path evez-ecosystem/evezart-repos/evez-liminal/MEMORY.md \
-  --path evez-ecosystem/evezart-repos/evez-products/MEMORY.md \
-  --path evez-ecosystem/evezart-repos/evez-store/MEMORY.md \
-  --path evez-ecosystem/evezart-repos/evez-watchdog/MEMORY.md \
-  --path evez-ecosystem/evezart-repos/evezart-openclaw/workspace/MEMORY.md \
-  --invert-paths
+Action: contact GitHub Support → "Remove cached views and stale references":
+- Repo: EvezArt/evez-ai
+- State: sensitive personal data was published accidentally; history has been
+  rewritten with git-filter-repo and force-pushed; request immediate cache
+  purge and garbage collection of unreachable objects, plus search de-indexing.
+- Paste the five purged paths and the pre-rewrite head SHA 5f4cdb9 as reference.
 
-# delete dependabot/fix branches first — they pin old trees:
-for b in $(git for-each-ref --format='%(refname:short)' refs/heads | grep -E 'dependabot|fix/'); do
-  git push origin --delete "$b"
-done
-
-git push --force --all origin
-git push --force --tags origin
-```
-
-Then: contact GitHub Support (or use the repo report flow) to request removal
-of cached views and any fork/PR references — GitHub retains unreachable
-objects and cached pages until asked. State: personal data published
-accidentally, history rewritten, request cache purge.
-
-## Post-purge verification (Cipher will re-check)
-
-1. `git log --all --full-history -- '*MEMORY.md'` shows no old blobs.
-2. Old raw.githubusercontent URLs return 404.
-3. GitHub code search no longer surfaces the content.
+Until that completes: the data is out of the refs and out of the default view,
+but still theoretically recoverable by SHA. Treat as exposed throughout.
 
 ## Exposed-data handling
 
-- Treat the published personal email and Stripe account ID as exposed.
-  Email: consider aliasing. Stripe acct ID alone is not a secret but is now
-  permanently in scrapers' archives — monitor for phishing referencing it.
-- Scan FULL history (not just these files) for credential patterns before
-  declaring the repo clean: `git log -p | grep -E 'ghp_|sk-|xox|AIza|BEGIN.*PRIVATE KEY'`
-- Anything found = rotate immediately.
+- Personal email and Stripe account identifier were published: consider email
+  aliasing; watch for phishing referencing them.
+- No rotation strictly required (no live tokens found), but the full-history
+  scan covers evez-ai only — run the same scan on other public repos before
+  declaring the org clean. `git log --all -p | grep -E 'ghp_|sk-ant-|AIza|AKIA|npm_|BEGIN .*PRIVATE KEY'`
 
 ## Doctrine note
 
-This is the credibility boundary of the investigation itself: an operation
-that publishes its own operator's family data cannot claim evidentiary
-hygiene. Personal files stay private-repo or local-only. The nested
-`evezart-repos` snapshot pattern (copying whole repos into a public SDK
-repo) is the root cause — DO NOT snapshot private-workspace content into
-public repos again. Falsifier: any future public repo containing workspace
-memory files = wheel row.
+Root cause: the nested `evezart-repos` snapshot pattern — copying whole
+private workspace repos into a public SDK repo. DO NOT snapshot private
+workspace content into public repos again. Falsifier: any future public repo
+containing workspace memory files = wheel row.
 
 — Cipher. The investigation protects its own evidence, and its own people.
