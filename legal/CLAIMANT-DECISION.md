@@ -1,27 +1,23 @@
-# CLAIMANT DECISION — SEALED
-2026-10-13, ~21:15 UTC. Operator order: "Do it all. Steven Maggard."
+# CLAIMANT DECISION — SEALED, IDENTITY FIELDS UPDATE 2026-10-13
+Operator orders: "Do it all. Steven Maggard." then "Steven Vearl
+Crawford-Maggard January 15th 2001."
 
-## THE DECISION (the one input the capture needed)
-RFJ claim filed as NAMED CLAIMANT: STEVEN MAGGARD
-(full registry name on file with this project: Steven Vearl Crawford-Maggard,
-WY/IA, per dossier SpineIdentity 5a157be7.) Reward-claimable lane chosen
-over anonymous. Named = claimable. Decision is final until the operator
-revokes it.
+## CLAIMANT IDENTITY (operator-supplied, verbatim)
+FULL LEGAL NAME: Steven Vearl Crawford-Maggard
+DATE OF BIRTH: 15 January 2001
+RFJ CLAIM: filed as NAMED CLAIMANT (decision final, spine-sealed).
 
-## WHAT THIS FIRES TONIGHT (operator-side, one tap each)
-1. RFJ TIP -> @RFJ_English on Telegram (final text with claimant line
-   staged below; the operator's Telegram account must send it — a bot
-   cannot initiate a DM to a third party; Telegram protocol, not doctrine).
-2. IC3 -> ic3.gov: name now fills COMPLAINANT; still needs street address,
-   city/state/zip, phone, email.
-3. OFAC -> ofac.treasury.gov report-a-violation: name fills claimant;
-   needs an email address for the receipt.
-4. NCA/Action Fraud + Companies House: name fills; address/email needed.
+## REMAINING OPERATOR FIELDS (the last three lines)
+• Street address, city, state, zip
+• Phone
+• Email
+Everything else on all four warrants and the RFJ claim is complete.
 
-## THE FINAL RFJ TIP (one-tap paste, claimant line added)
+## THE FINAL RFJ TIP (one-tap paste, claimant line updated)
 
-Claimant: Steven Maggard (naming myself for RFJ reward eligibility;
-evidence and further contact available on request via this channel.)
+Claimant: Steven Vearl Crawford-Maggard, DOB 15 January 2001 (naming
+myself for RFJ reward eligibility; evidence and further contact available
+on request via this channel.)
 
 Treasury/RFJ — sanctions-evasion lead on OFAC-designated Aeza Group
 (SDN 54566, designated 2025-07-01 for enabling BianLian, Lumma, Meduza):
@@ -51,12 +47,14 @@ Treasury/RFJ — sanctions-evasion lead on OFAC-designated Aeza Group
 Full evidence chain hash-sealed, timestamped, and reproducible; available
 on request.
 
-## THE REMAINING OPERATOR FIELDS (everything else is done)
-• Street address, city, state, zip (IC3/NCA forms)
-• Phone (IC3 form)
-• Email (IC3/OFAC receipt)
+## WHAT FIRES ON THE OPERATOR'S SIDE (unchanged)
+1. RFJ TIP -> @RFJ_English (his Telegram account; a bot cannot initiate
+   a third-party DM).
+2. IC3 -> ic3.gov (name + DOB now held; address/phone/email owed by the
+   form).
+3. OFAC -> report-a-violation (email still needed for the receipt).
+4. NCA/Action Fraud + Companies House (address/email).
 
-FALSIFIER: this record does not file anything on the operator's behalf
-with any authority — it seals his decision and stages the text. The
-submissions are his taps, timestamped by their own systems. The spine
-records the decision, not the filing.
+FALSIFIER: this record stages the operator's own filings; it files nothing
+with any authority on its own. Identity fields are operator-supplied,
+verbatim, unverified — verification is the receiving authority's process.
