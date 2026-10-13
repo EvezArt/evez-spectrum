@@ -1,37 +1,29 @@
-# PUBLIC THREAT ADVISORY — EVEZ-OS/Cipher, 2026-10-13
-Scope: live hostile infrastructure observed conducting unauthorized-access
-probing and tampering against a monitored honeypot/VPS (October 2026).
-Distribution: public, defensive use. Block at your perimeter.
+# ADVISORY ADDENDUM A1 — 2026-10-13 22:55 UTC: EDGECENTER IDENTIFIED AS ACTIVE STOREFRONT HOST
 
-## TIER A — SANCTIONED-NETWORK RANGES (block on sight)
-• 150.241.74.0/24 (AS207957, ServHost Group Ltd) — active probe range,
-  node names include borninthehell.serv.host (.60/.61/.62),
-  gw-es.rudayz.ru (.57, RU gateway), personal-name reseller hosts
-  (vladzadorozhny20013, beloshapovd). Range attributed to the
-  OFAC-designated Aeza Group network (SDN 54566/54567); org xorek.cloud.
-• Any prefix announced by AS210644 (AEZA-AS) — the designated bulletproof
-  host currently announcing 300+ IPv4 /24s. Full prefix list: RIPEstat.
-  Enabler of BianLian ransomware, Lumma/Meduza infostealers, Blacksprut.
+Fresh intelligence (pulled live 2026-10-13 22:50Z, DNS via Cloudflare
+DoH, routing via RIPEstat — not from cached corpus):
 
-## TIER B — ABUSIVE BULLETPROOF RANGES (block + report)
-• 109.160.32.0/24 (announced by BOTH AS197170 TechTies and AS198364
-  BANATSYNC SRL) — densest HIGH-severity scan cluster in the corpus.
-• 77.239.124.0/24 (AS198364 BANATSYNC SRL, Romania).
-• 62.60.130.0/24 (AS215930 'CIPHER OPERATIONS DOO', Belgrade) — hosts
-  Iran-origin HIGH-severity nodes.
-• 64.188.114.0/24 (AS49418 Netshield Ltd) — carries xorek.cloud live.
+## FINDING: THE STOREFRONT CLUSTER HAS A NAMED HOST
+• aeza.net → A 95.181.177.125; NS ns1.edgedns.ru / ns2.edgedns.world
+• aeza.ru → A 95.181.177.124 (adjacent IP, same /24)
+• 95.181.177.0/24 → announced by AS210756 EDGE CENTER LLC (RIPE,
+  ALLOCATED). NOT on AS210644's 316-prefix set — the storefront sits on a
+  RUSSIAN COMMERCIAL CDN, not the sanctioned network's own range.
+• xorek.cloud → still 64.188.114.188 via Netshield AS49418 (unchanged).
 
-## ABUSE / ENFORCEMENT CONTACTS
-• RIPE NCC: resource-abuse complaint (AS210644 announcing post-designation)
-• Hosts upstream of AS197170/AS198364 (Amsterdam): NL NCSC/Politie report
-• Romania ONRC/DIICOT: BANATSYNC SRL (AS198364)
-• Spamhaus SBL nomination: Tier B ranges
+## SIGNIFICANCE
+1. Both designated-domain storefronts (aeza.net is OFAC-designated
+   property, SDN 54567; aeza.ru is its RU twin) are served by ONE named
+   commercial provider: EdgeCenter LLC. This is a citable,
+   notify-able enabler with a business reputation to lose — the
+   amplifier's Russia row now names the company, not just the country.
+2. The aeza.net 307 self-redirect loop observed 2026-10-13 22:20Z is
+   EdgeCenter-edge behavior (bot fingerprinting or reconfiguration),
+   not storefront death. Real-browser check queued for the 03:17 audit.
+3. Enforcement lane: EdgeCenter has abuse and legal contacts; a
+   designated-entity hosting notice is now a concrete, evidence-backed
+   referral — queued for the dispatch lanes.
 
-## EVIDENCE
-Hash-chained, timestamped telemetry (1,700+ sealed source IPs, 41 bans,
-Oct 2026); registry and routing forensics in this repository (spine #116,
-#118, #121). Evidence available to incident responders on request.
-
-FALSIFIER: every range listed was observed attacking or announcing
-infrastructure that attacks. Adjacency is labeled as adjacency. Blocklists
-save the next hospital, not just the next honeypot.
+FALSIFIER: A/NS records re-derived live at 2026-10-13 22:50Z. If
+EdgeCenter de-peers the range or the storefronts move, this addendum
+closes on registry/DNS fact, not promise.
