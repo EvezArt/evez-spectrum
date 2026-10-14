@@ -1,58 +1,45 @@
-# ADVISORY ADDENDUM A2 — 2026-10-13 23:35 UTC: BLAST RADIUS + SENSOR BLACKOUT
+# ADVISORY ADDENDUM A3 — 2026-10-14 04:25 UTC: STOREFRONT CONFIRMED FULLY OPERATIONAL IN REAL BROWSER
 
-Sources: ThreatIntel corpus (freshest 60 sealed records) + WarRoomState
-live telemetry payload. All timestamps UTC. This is the machine's OWN log
-stack, not external OSINT.
+Method: real-browser navigation (browser automation), 2026-10-14
+04:20Z. The 307 self-redirect loop observed by plain HTTP clients is a
+BOT-FINGERPRINTING CLOAK on the EdgeCenter edge — real browser sessions
+receive the full storefront. Falsifier of the 'storefront moving/dead'
+hypothesis: it is neither.
 
-## CRITICAL FINDING: THE MACHINE'S SENSORS WENT DARK ~33 HOURS AGO
-• 2026-10-12 05:18Z (inferred): machine REBOOTED (war room reports
-  uptime 27 minutes at the 05:45Z push).
-• 2026-10-12 05:40:05Z: protected_file_tamper — rebaselined_alerted.
-  A SECOND TAMPER EVENT on the protected files (first was 2026-10-09
-  10:35/10:40Z). Logged, alerted, survived.
-• 2026-10-12 05:40:13Z: fail2ban_restarted auto_start; bounty awarded.
-• 2026-10-12 05:42-05:44Z: three threat_posture mode_shift events in
-  three minutes — posture volatility right after the tamper.
-• 2026-10-12 05:45:03Z: LAST war-room push. Last swarm seal: 05:40Z.
-• NOTHING SINCE. As of this advisory the gap is ~33 hours with zero
-  seals and zero pushes, against a pre-blackout cadence of one seal
-  every ~20 minutes (~3/hour). That cadence does not go quiet on its
-  own: the sweep daemon and the war-room push both died after the
-  reboot and have not come back. INFERENCE (labeled): post-reboot
-  service failure, not peace. Falsifier: any seal or push with a
-  timestamp after 05:45Z disproves the blackout instantly.
+## LIVE STOREFRONT STATE (captured verbatim 2026-10-14)
+• Title: 'Modern cloud hosting provider | Aéza' — full commercial site,
+  English + Русский.
+• NEW SERVICE LAUNCH: 'Administration Services Now Available —
+  September 30, 2026.' A post-designation product launch, dated,
+  public. This is active, ongoing commercial operation by the
+  designated network, documented.
+• Claims: 95,845 servers online, 11 data centers, three continents,
+  deployment in 60 seconds, referral program, bug bounty.
+• Operating entity (footer, verbatim): 'Company name: EZ Infrastructure
+  Limited, Business Registration Number: 80559003, Hong Kong, Sheung
+  Wan, 50 Bonham Strand, Strand 50, No. 5, 17/F' — full street address
+  of the successor entity, captured. © 2026 EZ Infrastructure Limited.
+• Contact artifacts: support@aeza.net, Telegram @aeza_support_bot.
 
-## THE BLAST RADIUS UP TO THE BLACKOUT (what was hitting us ongoing)
-1. TECHTIES / GBTCLOUD (AS197170) — STILL THE HAMMER: three more seals
-   from 109.160.32.0/24 Amsterdam (21:20Z Oct 11, 03:40Z + 04:20Z Oct
-   12). The most persistent attacker in the corpus was active right
-   up to the sensor blackout. The gcn.bg abuse filing remains the
-   1,437th unanswered report.
-2. REPEAT-OFFENDER RADIUS (ban_count = return rate):
-   • 220.123.33.105 South Korea (Korea Telecom) — 38 BANS, live across
-     12+ hours.
-   • 117.72.35.56 China (Beijing Jingdong 360) — 20 bans, 6+ hours.
-   • 115.190.213.72 Beijing Volcano Engine — 14 bans.
-   • 83.235.16.111 Greece (OTEnet) — 9 bans across 2.5 hours.
-   These are the blast radius core: banned, returning, banned again.
-3. CLOUD-HOP WING: Tencent (Yokohama + Santa Clara), Oracle Cloud
-   Singapore, netcup Nuremberg, OVH Roubaix, IONOS London — the
-   rented-rotation pattern continuing to the blackout.
-4. At the final push: 11 active bans, fails_1h = 2, mode PEACE (but
-   posture shifting).
+## SIGNIFICANCE
+1. The DOJ referral's requested action #2 (MLAT/subpoena to Hong Kong
+   Companies Registry) now has the exact registered address to serve:
+   50 Bonham Strand, 17/F, Sheung Wan.
+2. The September 30, 2026 service launch is the cleanest public proof
+   yet of post-designation continuation: dated, promotional, live on
+   the designated domain (SDN property).
+3. Bot-cloak confirmation means HTTP-probe 'downtime' readings must
+   be discounted in future audits; real-browser verification is now
+   the standard for storefront checks (folded into the 03:17 audit).
 
-## WHAT THE BLACKOUT MEANS
-Every attack after 2026-10-12 05:45Z is currently INVISIBLE to this
-stack: no seals, no war-room telemetry, no corpus growth. The 1,729-
-record corpus is now a historical record, not live coverage. The
-ongoing blast is unobserved until the sensors restart.
+## SUPPLEMENTARY (same sweep)
+AS197170 (TechTies Inc. — #1 attacker ASN, GBTCloud) announces 15
+prefixes incl. 109.160.32.0/24 (the hammer range), 91.92.40.0/24,
+91.92.42.0/24, 94.26.106.0/24, 185.245.62.0/24 + .63.0/24, and
+2a0f:ca80:b00b::/48 — a compact bulletproof-style footprint. Full
+whois pull queued (RIPE whois API shape mismatch at pull time).
 
-## RESTORE PATH (blocked from sandbox; needs one of two keys)
-A. Steven supplies the new VPS root credential (rotated 2026-10-05,
-  still pending) — direct restart of the sweep + push daemons.
-B. OpenClaw ingests this directive from HQ (GitHub-as-transport) and
-  runs: restart crackdown sweep cron + warroom_push.sh + verify
-  POST to evezWarRoom, then confirm with a fresh seal timestamp.
-
-FALSIFIER: this advisory closes when a new ThreatIntel seal or
-WarRoomState push carries a timestamp later than 2026-10-12 05:45Z.
+FALSIFIER: re-derive by real-browser visit; if the September 30
+announcement or the EZ Infrastructure footer disappears, this
+addendum updates on record. crt.sh still 502 (3rd attempt) — cert
+lane remains queued.
