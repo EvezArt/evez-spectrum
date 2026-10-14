@@ -1,45 +1,40 @@
-# ADVISORY ADDENDUM A3 — 2026-10-14 04:25 UTC: STOREFRONT CONFIRMED FULLY OPERATIONAL IN REAL BROWSER
+# ADVISORY ADDENDUM A4 — 2026-10-14 04:45 UTC: INTROSPECTION SHUTDOWN + DC FOOTPRINT
 
-Method: real-browser navigation (browser automation), 2026-10-14
-04:20Z. The 307 self-redirect loop observed by plain HTTP clients is a
-BOT-FINGERPRINTING CLOAK on the EdgeCenter edge — real browser sessions
-receive the full storefront. Falsifier of the 'storefront moving/dead'
-hypothesis: it is neither.
+Method: real-browser navigation of the storefront's own infrastructure
+pages, 2026-10-14 04:40-04:45Z.
 
-## LIVE STOREFRONT STATE (captured verbatim 2026-10-14)
-• Title: 'Modern cloud hosting provider | Aéza' — full commercial site,
-  English + Русский.
-• NEW SERVICE LAUNCH: 'Administration Services Now Available —
-  September 30, 2026.' A post-designation product launch, dated,
-  public. This is active, ongoing commercial operation by the
-  designated network, documented.
-• Claims: 95,845 servers online, 11 data centers, three continents,
-  deployment in 60 seconds, referral program, bug bounty.
-• Operating entity (footer, verbatim): 'Company name: EZ Infrastructure
-  Limited, Business Registration Number: 80559003, Hong Kong, Sheung
-  Wan, 50 Bonham Strand, Strand 50, No. 5, 17/F' — full street address
-  of the successor entity, captured. © 2026 EZ Infrastructure Limited.
-• Contact artifacts: support@aeza.net, Telegram @aeza_support_bot.
+## FINDING 1: THEY ARE REDUCING PUBLIC INTROSPECTION
+• /looking-glass (redirects to /lg/): 'looking-glass temporarily
+  disabled — Details are in telegram.' The looking glass — their live
+  network inventory tool — was pulled between the 2026-10-10 audit
+  capture and tonight.
+• /datacenters: 404 (footer link dead as well).
+• Meanwhile the storefront remains fully commercial (services,
+  referral program, dashboard login) and the reviews counter ticked
+  from 0 to 115 between two page loads minutes apart — the site is
+  ACTIVE, and its public transparency surfaces are being turned off.
+  INFERENCE (labeled): opsec tightening — visibility reduction without
+  operational reduction. The asymmetry (still selling, less showing)
+  is itself evidence of deliberate concealment posture.
 
-## SIGNIFICANCE
-1. The DOJ referral's requested action #2 (MLAT/subpoena to Hong Kong
-   Companies Registry) now has the exact registered address to serve:
-   50 Bonham Strand, 17/F, Sheung Wan.
-2. The September 30, 2026 service launch is the cleanest public proof
-   yet of post-designation continuation: dated, promotional, live on
-   the designated domain (SDN property).
-3. Bot-cloak confirmation means HTTP-probe 'downtime' readings must
-   be discounted in future audits; real-browser verification is now
-   the standard for storefront checks (folded into the 03:17 audit).
+## FINDING 2: DC FOOTPRINT FROM THE HOMEPAGE FLAG ROW (2026-10-14 capture)
+The homepage stats bar shows a flag row + '11 data centers',
+'three continents'. Flags visible in the rendered capture: Finland,
+Poland, Netherlands, United Kingdom, France, United States, Russia,
+Sweden, Austria, Germany. Reading: Aeza's commercial hosting surface
+runs on rented capacity in EU/US commercial data centers PLUS their
+own RU network. Every non-RU DC in that list is a commercial landlord
+with an abuse desk — enforcement surface for the designated network's
+ongoing operations.
 
-## SUPPLEMENTARY (same sweep)
-AS197170 (TechTies Inc. — #1 attacker ASN, GBTCloud) announces 15
-prefixes incl. 109.160.32.0/24 (the hammer range), 91.92.40.0/24,
-91.92.42.0/24, 94.26.106.0/24, 185.245.62.0/24 + .63.0/24, and
-2a0f:ca80:b00b::/48 — a compact bulletproof-style footprint. Full
-whois pull queued (RIPE whois API shape mismatch at pull time).
+## ACTIONS
+1. The 10 non-RU DC countries map to the country-gap ledger rows —
+   hosting-notice referrals become concrete per-DC once specific
+   facility names surface (dashboard/pricing pages are the next
+   enumeration target).
+2. Storefront audit checklist gains: /lg status, /datacenters status,
+   reviews counter delta (activity heartbeat), footer entity fields.
+   Any transparency surface going dark gets logged with a timestamp.
 
-FALSIFIER: re-derive by real-browser visit; if the September 30
-announcement or the EZ Infrastructure footer disappears, this
-addendum updates on record. crt.sh still 502 (3rd attempt) — cert
-lane remains queued.
+FALSIFIER: re-derive by real-browser visit. If the looking glass
+returns, its IP inventory becomes the next high-value capture.
