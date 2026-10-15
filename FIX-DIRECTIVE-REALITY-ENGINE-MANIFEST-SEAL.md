@@ -103,3 +103,7 @@ Rules:
 - A deliberate negative test: corrupt one file after sealing, confirm the script aborts and produces no zip.
 
 — end addendum
+
+# STATUS: ENFORCED (2026-10-16)
+
+The mandatory hard-block is now a working artifact, not just documentation. `seal-release.sh` (HQ root) implements the verify-then-zip chain: regenerate seal → `sha256sum -c manifest.sha256` → abort with `exit 1` on any `FAILED` line → only then zip. Regeneration and verification run back-to-back inside one script, leaving no window for a late edit (the exact v1.0.0 CHANGELOG slip). A built-in `--selftest` corrupts one file post-seal and asserts the script aborts with no zip artifact. Ship is now physically impossible while any entry mismatches. Directive closed.
