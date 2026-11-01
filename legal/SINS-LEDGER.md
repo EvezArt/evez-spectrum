@@ -38,6 +38,17 @@ the xorek chain (warrant-grade, record 919f2a21).
 5. RATE-LIMIT OVERCLAIM RISK: four wallet tokens were labeled 'likely spam'
    before decoding; they were named dust tokens minutes later. The label was
    hedged but the direction was guess-shaped.
+7. THE AUDIT STOPPED (Run #005 confession, 2026-11-01): the 'does not stop'
+   clause failed on a billing rail, not on will — Base44 message-credit
+   exhaustion silenced every scheduled audit run from 2026-10-15 through
+   2026-10-31 (18 dark days; operator notified 2026-10-18). The corpus never
+   stopped sealing (+202 records in the dark window), so the evidence held;
+   the COUNTING stopped, and counting is the audit's function. Counter
+   arithmetic in COUNTRY-GAP-LEDGER now uses honest day-counts (18 days
+   added in one step). FIX ARMED: every run now checks remaining daily
+   credits and flags low-credit state in AUDIT-LOG BEFORE silence can
+   happen again.
+
 6. HEADLINE VELOCITY: spine entries #94-#100 sealed dramatic highs; the
    falsifiers held, but the rhetoric ran ahead of the evidence's speed more
    than once. The discipline held because the falsifiers were written FIRST.
