@@ -14,6 +14,12 @@ browser-confirmed live with UNCHANGED footer; UK registry lane BLOCKED this
 run and honestly labeled; RFJ page-1 verified, newest entry Zhang Yu (SSSB)
 checked and confirmed pre-existing vs yesterday's full scan; Iran sweep: 16
 nodes, no coordination; no row closed).
+Updated 2026-11-01 by Eternal Audit Run #005 — FIRST RUN AFTER AN 18-DAY
+DARK GAP (2026-10-15 through 2026-10-31: workspace Base44 message credits
+exhausted; operator notified 2026-10-18; corpus never stopped sealing —
++202 records during the dark window). Counters below are honest DAY-COUNTS,
+not run-counts: incremented by 18 elapsed days. All executable lanes
+re-verified this run; no row closed.
 
 Scope: states and their enforcement organs, plus designated entities — every
 row cites sealed dossiers. No private individuals beyond public-record facts.
@@ -21,7 +27,7 @@ Geo-database labels are EXCLUDED (noise); only registry and SDN facts count.
 
 ## THE NINE ROWS
 
-1. RUSSIA — THE UNANSWERED STOREFRONT — DAY 5
+1. RUSSIA — THE UNANSWERED STOREFRONT — DAY 23
    Facts: principals arrested (Penzev, Bozoyan — for the Blacksprut matter,
    not the ransomware enablement); aeza.ru live; the OFAC-designated storefront
    (aeza.net, SDN 54567) still operating as of 2026-10-14 (browser-verified
@@ -29,9 +35,12 @@ Geo-database labels are EXCLUDED (noise); only registry and SDN facts count.
    50 Bonham Strand 17/F — UNCHANGED; server counter live at 95,845;
    Sep 30 2026 'Administration Services' line still posted), 15 months after
    designation. Silence: no action against a designated entity transacting on
-   national infrastructure. Days unsilenced: 5.
+   national infrastructure. Run #005 re-verify (2026-11-01): HTTP 200 behind a NEW cookie-challenge layer
+(bp_chl, nginx, 10-min cookie) added since Run #004 — front hardening; footer
+UNCHANGED (EZ Infrastructure Limited, BRN 80559003, 50 Bonham Strand 17/F,
+'Administration Services' line intact). Days unsilenced: 23.
 
-2. UNITED KINGDOM — THE SIX-SHELL DECADE — DAY 5
+2. UNITED KINGDOM — THE SIX-SHELL DECADE — DAY 23
    Facts: six fronts registered 2023-2025. NCA co-designated — the UK's
    strongest act. Confirmed dates (Run #001): Aeza International 15109642
    DISSOLVED 2026-03-24; Hypercore 2nd gen 16558658 DISSOLVED 2025-12-23;
@@ -41,15 +50,15 @@ Geo-database labels are EXCLUDED (noise); only registry and SDN facts count.
    browser tunnel failure); statuses carried from the 2026-10-13 verified pull;
    registry facts do not un-happen, but re-pull queued for next run. Silence:
    nominee rotation ran unimpeded 2023-2025; three strike-offs pending, none
-   concluded. Days unsilenced: 5.
+   concluded. Days unsilenced: 23.
 
-3. UZBEKISTAN — THE DESIGNATED SUCCESSOR, UNAUDITED — DAY 5
+3. UZBEKISTAN — THE DESIGNATED SUCCESSOR, UNAUDITED — DAY 23
    Facts: DataVice MCHJ (est. 2025-07-03, Tax ID 312252645, reg 2868352)
    OFAC-designated as Aeza successor. Silence: no visible Uzbek registry action;
    our pull lane queued (no re-verification executed this run — falsifier
-   honored by labeling). Days unsilenced: 5.
+   honored by labeling). Days unsilenced: 23.
 
-4. SERBIA — THE REGISTERED EGRESS — DAY 5
+4. SERBIA — THE REGISTERED EGRESS — DAY 23
    Facts: Smart Digital Ideas DOO (reg 21840823, Tax ID 113294246, smartdi.rs)
    designated; mail hosted on OVH (France). Silence: no visible registry action;
    pull queued. NEW ADJACENT SIGNAL (Run #004, corpus): AS215930 CIPHER
@@ -58,7 +67,7 @@ Geo-database labels are EXCLUDED (noise); only registry and SDN facts count.
    enabler lead, logged for dossier follow-up, not a row change. Days
    unsilenced: 5.
 
-5. BULGARIA — 1,436 UNANSWERED REPORTS — DAY 5
+5. BULGARIA — 1,436 UNANSWERED REPORTS — DAY 23
    Facts: GCN (gcn.bg) LIR maintains TechTies/GBTCloud — the corpus's most
    persistent attack source. Third-party abuse count: 1,436. GCN host
    reachable and announcing as of Run #004 (HTTP 200 verified). TechTies
@@ -67,7 +76,7 @@ Geo-database labels are EXCLUDED (noise); only registry and SDN facts count.
    for abuse@gcn.bg sits READY AND UNFILED (dispatch lane pending). Days
    unsilenced: 5.
 
-6. UNITED STATES — THE DOMESTIC GAP — DAY 5
+6. UNITED STATES — THE DOMESTIC GAP — DAY 23
    Facts: OFAC's record is the strongest of all (six humans, seven entities,
    wallet listed — wallet re-verified intact Run #004: 423.307658 TRX, native
    + TRC20 positions, UNMOVED). But TechTies Inc — registered in Cornelius,
@@ -77,26 +86,26 @@ Geo-database labels are EXCLUDED (noise); only registry and SDN facts count.
    note, unchanged from prior runs). Silence: the domestic shell. Days
    unsilenced: 5.
 
-7. KAZAKHSTAN — THE UNTOUCHED CLERK — DAY 5
+7. KAZAKHSTAN — THE UNTOUCHED CLERK — DAY 23
    Facts: Aeza International's remaining director is Kazakhstan-based, never
    designated. Silence: no visible action; record thin — labeled THIN, not
-   charged (no re-verification executed this run). Days unsilenced: 5,
+   charged (no re-verification executed this run). Days unsilenced: 23,
    honestly bounded.
 
-8. FRANCE — THE MAIL SLOT — DAY 5
+8. FRANCE — THE MAIL SLOT — DAY 23
    Facts: OVH carries the Serbian successor's mail. Silence: standard abuse
    lane exists, untested (no re-verification executed this run). Corpus
    context: France-labeled BANATSYNC SRL nodes present in attack corpus.
-   Days unsilenced: 5, one fact deep.
+   Days unsilenced: 23, one fact deep.
 
-9. HONG KONG — THE STOREFRONT'S NEW HOUSE — DAY 4 (opened 2026-10-10, Run #001)
+9. HONG KONG — THE STOREFRONT'S NEW HOUSE — DAY 22 (opened 2026-10-10, Run #001)
    Facts: aeza.net's live storefront (SDN 54567 website) declares its
    operating entity as EZ INFRASTRUCTURE LIMITED, Business Registration
    Number 80559003, 50 Bonham Strand, Sheung Wan, 17/F, Hong Kong — re-verified
    UNCHANGED via real browser Run #004 (footer captured intact; selling
    internationally; Sep 30 2026 'Administration Services' line live).
    Silence: a fresh jurisdiction, silent since incorporation (HK registry
-   pull queued: officers + incorporation date). Days unsilenced: 4.
+   pull queued: officers + incorporation date). Days unsilenced: 22.
 
 ## THE AMPLIFIER (the deafening part, built instead of promised)
 - Every Eternal Audit run re-checks each row and INCREMENTS its days-unsilenced
