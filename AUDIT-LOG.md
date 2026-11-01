@@ -89,3 +89,89 @@ upgrade → SILENT SEAL per standing order.
 
 FALSIFIER: every claim above names its lane and its verification status;
 blocked lanes are labeled as blocked, never as verified.
+
+
+# ETERNAL AUDIT RUN #005 — 2026-11-01 03:02 MST (first run after 18-day dark gap)
+Gap confession: scheduled runs 2026-10-15 through 2026-10-31 never executed —
+Base44 message-credit exhaustion (operator notified 2026-10-18). Logged as
+auditor sin #7 in SINS-LEDGER. Counters are honest day-counts (+18). Fix
+armed: each run now records remaining daily credits; low state gets flagged
+so silence is visible BEFORE it starts. Credits at this run's start: 0/25
+month, 0/5 daily.
+
+1. WALLET TU4tDF: UNMOVED — 423.307658 TRX (byte-identical to baseline);
+native + TRC20 positions unchanged; last transaction still 2025-07-01
+(TransferContract pair). TronGrid live pull, success:true. NO MOVEMENT.
+
+2. STOREFRONT aeza.net (SDN 54567): LIVE — HTTP 200 after passing a NEW
+cookie-challenge layer (bp_chl, nginx). Full 136,863-byte page served;
+footer UNCHANGED: EZ Infrastructure Limited, BRN 80559003, 50 Bonham Strand
+17/F, 'Administration Services' line intact. Change vs Run #004:
+anti-bot challenge layer deployed between Oct 14 and Nov 1 — front
+hardening only, operating entity unchanged. aeza.ru also behind 307
+challenge. Non-broadcast per ledger row-closure rules.
+
+3. UK ORBIT (Companies House registry re-pull, all five pages HTTP 200):
+14769288 NETSHIELD LTD — Active — Proposal to strike off (UNCHANGED).
+15446241 DPKGSOFT INTERNATIONAL — Active — Proposal to strike off (UNCHANGED).
+15092714 INTERNATIONAL HOSTING COMPANY — Active — Proposal to strike off
+(UNCHANGED). 16558658 HYPERCORE LTD — Dissolved (UNCHANGED, pre-baseline).
+15109642 AEZA INTERNATIONAL LTD — Dissolved (UNCHANGED, pre-baseline).
+NO strike-off completions, NO new dissolutions. The pending three stay
+pending.
+
+4. CORPUS SEALING RATE: ThreatIntel = 1,961 records (500+500+500+461,
+pagination exhausted) vs 1,759 at Run #004 = +202 in 18 days (~11/day).
+The machine sealed through the entire dark window — latest record
+2026-10-31T09:20Z. Rate HEALTHY. TechTies continuation confirmed: new
+nodes sealed Oct 22 (45.153.34.117 NL), Oct 25-27 (93.152.221.206
+DE-labeled, 5 attempts, 148 subnet bans); 109.160.32.x family active to
+Oct 19.
+
+5. PENDING LANES: TechTies NC SoS — root HTTP 200, business-search path
+not executable from this lane, queued. Token identities — VPS dossier
+lane, not re-executable from Base44, labeled. gcn.bg — egress BLOCKED
+from sandbox (000, retries failed); liveness unverified this run, re-pull
+queued; abuse bundle still READY-AND-UNFILED.
+
+6. AMPLIFIER: all nine rows re-checked where lanes allowed; rows 1, 2, 4,
+5, 6 carry fresh Run #005 facts; rows 3/7/8/9 labeled (registry lanes
+queued). Counters: rows 1-8 to DAY 23, row 9 to DAY 22 (day-counts).
+NO ROW CLOSED. Silence now has 18 more days of receipts.
+
+7. RFJ BOARD WATCH: /rewards/ index served HTTP 500-with-content (server
+anomaly, labeled); page-1 tracked names all present, Zhang Yu still
+newest visible; no listing above baseline. Secondary news scan (Oct 2026
+coverage): no new cyber-listing signal. NO BOARD CHANGE within executed
+verification. Browser full-pagination re-scan queued.
+
+8. OPERATOR-THREAD PROFILING: Iran sweep now 20 nodes (was 16). New:
+Afranet 78.109.200.147 (Oct 23-24, first Afranet node), Respina SECOND
+node 78.39.48.166 (Oct 22-24, 142 subnet bans), Pars Shabakeh third node
+87.248.155.119 (Oct 15), Asiatech long-life nodes (.241 to Oct 17, .251
+to Oct 24, .239 Oct 7), TCI 217.218.10.46 (10 direct attempts, 502 subnet
+bans, Oct 3-10), Respina 2.188.206.146 extended to Oct 10 (457 bans).
+Timing: windows scattered; shared last_seen 2026-10-10T21:40:27Z appears
+across Iranian AND non-Iranian nodes (telemetry-cycle boundary, not
+attack sync). VERDICT: UNCOORDINATED at entity level; ISP recurrence
+noted (Respina x2, Asiatech x4, TCI x3). SERBIA TRIO (AS215930
+CIPHER OPERATIONS DOO BEOGRAD, 62.60.130.201/.242/.253, Iran-labeled):
+STILL ACTIVE — .201 last seen 2026-10-31T08:00Z (this run's morning),
+53-day continuous presence, subnet bans 3,128-3,592 — persistence
+STRENGTHENED but no new synchronization evidence → NOT upgraded to
+coordinated. OP-1af4cfa0ae / OP-81d9375745: entity lane holds no OP-
+records (queried directly and via Serbia-ASN readback: usernames empty);
+threads remain UNPROFILED per falsifier doctrine (timing analysis needs
+the sealed VPS dossier lane, still queued).
+
+BROADCAST DECISION: no wallet movement, no strike-off completion, no new
+dissolution, storefront entity unchanged (challenge layer only), no row
+closed, no new RFJ listing, no thread upgrade → SILENT SEAL per standing
+order.
+
+CREDIT STATE AT SEAL: daily 0/5 consumed this run before send; month 0/25
+consumed before send (fresh reset 2026-11-01). Next run: watch state, flag
+if daily remaining < 3.
+
+FALSIFIER: every claim above names its lane and its verification status;
+blocked lanes are labeled as blocked, never as verified.
