@@ -7,7 +7,14 @@ Re-checked 2026-10-14 by Eternal Audit Run #004: page 1 verified live
 (5-page pagination, Newest sort). Zhang Yu (SSSB) — page-1 newest — opened
 and checked: HAFNIUM actor, partner extradited April 2026; listing
 predates the 2026-10-13 full scan. NO BOARD CHANGE DETECTED; full
-pagination re-scan queued for next run (honest note: deep-page presence of
+pagination re-scan queued
+Re-checked 2026-11-01 by Eternal Audit Run #005: index pull served
+HTTP 500 with content (server-side anomaly, lane labeled honestly); all
+page-1 tracked names still PRESENT (Zhang Yu remains newest visible; no
+listing above baseline); secondary news scan: no new RFJ cyber-listing
+signal found in Oct 2026 coverage. NO BOARD CHANGE DETECTED within
+executed verification; browser-based full pagination re-scan remains
+queued. for next run (honest note: deep-page presence of
 the nine below is carried per the 10-13 full scan, not re-pulled tonight).
 
 ## THE BOARD (as listed 2026-10-11)
