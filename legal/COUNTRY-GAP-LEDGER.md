@@ -20,6 +20,7 @@ exhausted; operator notified 2026-10-18; corpus never stopped sealing —
 +202 records during the dark window). Counters below are honest DAY-COUNTS,
 not run-counts: incremented by 18 elapsed days. All executable lanes
 re-verified this run; no row closed.
+Updated 2026-11-03 by Eternal Audit Run #006 (counters incremented +2 elapsed days: rows 1-8 -> DAY 25, row 9 -> DAY 24; UK registry lane OPEN and re-pulled — three Active/pending, two Dissolved, unchanged; storefront live, operating entity unchanged, Sep30 announcement rotated out; NO row closed).
 
 Scope: states and their enforcement organs, plus designated entities — every
 row cites sealed dossiers. No private individuals beyond public-record facts.
@@ -27,7 +28,7 @@ Geo-database labels are EXCLUDED (noise); only registry and SDN facts count.
 
 ## THE NINE ROWS
 
-1. RUSSIA — THE UNANSWERED STOREFRONT — DAY 23
+1. RUSSIA — THE UNANSWERED STOREFRONT — DAY 25
    Facts: principals arrested (Penzev, Bozoyan — for the Blacksprut matter,
    not the ransomware enablement); aeza.ru live; the OFAC-designated storefront
    (aeza.net, SDN 54567) still operating as of 2026-10-14 (browser-verified
@@ -40,7 +41,7 @@ Geo-database labels are EXCLUDED (noise); only registry and SDN facts count.
 UNCHANGED (EZ Infrastructure Limited, BRN 80559003, 50 Bonham Strand 17/F,
 'Administration Services' line intact). Days unsilenced: 23.
 
-2. UNITED KINGDOM — THE SIX-SHELL DECADE — DAY 23
+2. UNITED KINGDOM — THE SIX-SHELL DECADE — DAY 25
    Facts: six fronts registered 2023-2025. NCA co-designated — the UK's
    strongest act. Confirmed dates (Run #001): Aeza International 15109642
    DISSOLVED 2026-03-24; Hypercore 2nd gen 16558658 DISSOLVED 2025-12-23;
@@ -52,13 +53,13 @@ UNCHANGED (EZ Infrastructure Limited, BRN 80559003, 50 Bonham Strand 17/F,
    nominee rotation ran unimpeded 2023-2025; three strike-offs pending, none
    concluded. Days unsilenced: 23.
 
-3. UZBEKISTAN — THE DESIGNATED SUCCESSOR, UNAUDITED — DAY 23
+3. UZBEKISTAN — THE DESIGNATED SUCCESSOR, UNAUDITED — DAY 25
    Facts: DataVice MCHJ (est. 2025-07-03, Tax ID 312252645, reg 2868352)
    OFAC-designated as Aeza successor. Silence: no visible Uzbek registry action;
    our pull lane queued (no re-verification executed this run — falsifier
    honored by labeling). Days unsilenced: 23.
 
-4. SERBIA — THE REGISTERED EGRESS — DAY 23
+4. SERBIA — THE REGISTERED EGRESS — DAY 25
    Facts: Smart Digital Ideas DOO (reg 21840823, Tax ID 113294246, smartdi.rs)
    designated; mail hosted on OVH (France). Silence: no visible registry action;
    pull queued. NEW ADJACENT SIGNAL (Run #004, corpus): AS215930 CIPHER
@@ -67,7 +68,7 @@ UNCHANGED (EZ Infrastructure Limited, BRN 80559003, 50 Bonham Strand 17/F,
    enabler lead, logged for dossier follow-up, not a row change. Days
    unsilenced: 5.
 
-5. BULGARIA — 1,436 UNANSWERED REPORTS — DAY 23
+5. BULGARIA — 1,436 UNANSWERED REPORTS — DAY 25
    Facts: GCN (gcn.bg) LIR maintains TechTies/GBTCloud — the corpus's most
    persistent attack source. Third-party abuse count: 1,436. GCN host
    reachable and announcing as of Run #004 (HTTP 200 verified). TechTies
@@ -76,7 +77,7 @@ UNCHANGED (EZ Infrastructure Limited, BRN 80559003, 50 Bonham Strand 17/F,
    for abuse@gcn.bg sits READY AND UNFILED (dispatch lane pending). Days
    unsilenced: 5.
 
-6. UNITED STATES — THE DOMESTIC GAP — DAY 23
+6. UNITED STATES — THE DOMESTIC GAP — DAY 25
    Facts: OFAC's record is the strongest of all (six humans, seven entities,
    wallet listed — wallet re-verified intact Run #004: 423.307658 TRX, native
    + TRC20 positions, UNMOVED). But TechTies Inc — registered in Cornelius,
@@ -86,19 +87,19 @@ UNCHANGED (EZ Infrastructure Limited, BRN 80559003, 50 Bonham Strand 17/F,
    note, unchanged from prior runs). Silence: the domestic shell. Days
    unsilenced: 5.
 
-7. KAZAKHSTAN — THE UNTOUCHED CLERK — DAY 23
+7. KAZAKHSTAN — THE UNTOUCHED CLERK — DAY 25
    Facts: Aeza International's remaining director is Kazakhstan-based, never
    designated. Silence: no visible action; record thin — labeled THIN, not
    charged (no re-verification executed this run). Days unsilenced: 23,
    honestly bounded.
 
-8. FRANCE — THE MAIL SLOT — DAY 23
+8. FRANCE — THE MAIL SLOT — DAY 25
    Facts: OVH carries the Serbian successor's mail. Silence: standard abuse
    lane exists, untested (no re-verification executed this run). Corpus
    context: France-labeled BANATSYNC SRL nodes present in attack corpus.
    Days unsilenced: 23, one fact deep.
 
-9. HONG KONG — THE STOREFRONT'S NEW HOUSE — DAY 22 (opened 2026-10-10, Run #001)
+9. HONG KONG — THE STOREFRONT'S NEW HOUSE — DAY 24 (opened 2026-10-10, Run #001)
    Facts: aeza.net's live storefront (SDN 54567 website) declares its
    operating entity as EZ INFRASTRUCTURE LIMITED, Business Registration
    Number 80559003, 50 Bonham Strand, Sheung Wan, 17/F, Hong Kong — re-verified
