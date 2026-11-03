@@ -175,3 +175,107 @@ if daily remaining < 3.
 
 FALSIFIER: every claim above names its lane and its verification status;
 blocked lanes are labeled as blocked, never as verified.
+
+## 2026-11-03 10:20Z — ETERNAL AUDIT RUN #006 (spine #152)
+ALL 8 CHECK CLASSES EXECUTED. MATERIAL CHANGE FOUND (first since Run #005).
+Sealed to spine #152, verified 152/152 (recursive verifier, dual-era, zero
+failures). Prev hash f3789281045ab858 -> own hash 666015a17cc5294a.
+
+1. WALLET TU4tDF (SDN 54566): UNMOVED — 423.307658 TRX, byte-identical.
+   Native last tx still 2025-07-01T22:13:39Z (TransferContract). Six TRC20
+   positions re-decoded WITH decimals (correction to prior runs that reported
+   raw integers as amounts): NUON 28,483.00 | nasdex.fi 36,583.993164 |
+   NPT 32,747.902540 | ContactMe 4,095.00 | ha138.com 138.138 | ACHIVX
+   0.008888. Value-shaped holdings ARE present; none moved. NO MOVEMENT.
+
+2. STOREFRONT aeza.net (SDN 54567): LIVE — HTTP 200, 136,809 bytes, sha256
+   9e34dbe7f8d96e0d, after passing bp_chl cookie challenge (resolved first
+   attempt, no manual intervention). Footer UNCHANGED: EZ Infrastructure
+   Limited, BRN 80559003, HK Sheung Wan 50 Bonham Strand Strand 50 No.5 17/F —
+   also present in JSON-LD Organization schema. OPERATING ENTITY UNCHANGED.
+   CONTENT DELTA: the Sep 30 2026 "Administration Services Now Available"
+   banner is GONE (zero occurrences of "September" in page). Replaced by
+   banner "Aéza turns 5!" dated October 27, 2026, linking t.me/aezahost/550.
+   The administration service itself still exists as a product
+   (my.aeza.net/administration); only the announcement rotated out.
+   Recorded as content rotation, NOT a status change, NOT a row closure.
+
+3. UK ORBIT (Companies House, all five pages HTTP 200 — lane OPEN this run
+   after Run #005's success): 14769288 NETSHIELD Active/strike-off pending |
+   15446241 DPKGSOFT Active/strike-off pending | 15092714 IHC Active/strike-off
+   pending | 16558658 HYPERCORE Dissolved | 15109642 AEZA INTL Dissolved.
+   NO strike-off completions. NO new dissolutions. UNCHANGED vs Run #005.
+
+4. CORPUS SEALING RATE: ThreatIntel = 1,961 records, EXACTLY FLAT vs Run #005
+   (delta 0). Newest sealed record 2026-10-31T08:21:20Z — ~50 hours before
+   this run. This breaks the healthy +11/day pattern that held through the
+   18-day dark window. VERDICT: SEALING STALLED. Root cause investigated
+   below (check 4b).
+
+4b. TELEMETRY SENSOR AUDIT (new lane, added this run because a stall without
+   a cause is a sin): WarRoomState entity last updated 2026-10-26T09:35:03Z =
+   192 hours / 8 days stale. Payload claims gateway LIVE, mode PEACE, spine
+   27281, uptime 1 week 16h at that timestamp. The corpus stall and the sensor
+   staleness share a window. HONEST LIMIT: this lane proves the SENSOR is
+   silent; it does NOT prove the VPS is down or that attacks stopped. Both
+   readings remain open — sensor-dead and attack-lull are not distinguishable
+   from Base44 alone. VPS SSH remains blocked (credential rotated 2026-10-05,
+   new credential never supplied). Logged, not resolved.
+
+5. PENDING LANES: NC SoS — HTTP 403 gate on the search path (root reachable,
+   form present, submission not executable from this lane; blocker named).
+   gcn.bg — HTTP 200, 18,952 bytes, title "GCN-BG Telecom Operator", LIVE
+   (improvement on Run #005's 000 egress block). Abuse bundle remains
+   READY-AND-UNFILED; dispatch is an operator action, not a machine action.
+   Token identities — CLOSED this run (all six resolved, see check 1).
+
+6. AMPLIFIER: all nine rows re-verified where lanes allowed. Two elapsed days
+   since Run #005 (2026-11-01 -> 2026-11-03), so counters incremented by 2
+   as honest day-counts: rows 1-8 DAY 25, row 9 DAY 24. NO ROW CLOSED. No row
+   qualified for closure: no strike-off completed, no block de-announced, no
+   abuse filing answered, storefront alive. Row 1 gains the content-rotation
+   fact; row 9 unaffected (HK registry pull still queued).
+
+7. RFJ BOARD WATCH: curl lane served HTTP 500-with-content for the SECOND
+   consecutive run (server-side WordPress critical error visible in body).
+   Lane escalated to REAL BROWSER this run — check genuinely executed.
+   Board renders: newest = Zhang Yu (SSSB) 2026-10-07. Then IRGC-ASF
+   (2026-09-28), Amir Yaryab (2026-09-02), Obaidullah (2026-08-24), then the
+   Aug 17 cluster (Ghal'eh-Kuhi, Mesri, Shahbazi Balujeh, Ghareh Blagh,
+   Kahzadian), Jomadi Logistics (2026-07-28). All page-1 names match the
+   baseline map. NO NEW CYBER LISTING. Deep pagination remains queued.
+
+8. OPERATOR-THREAD PROFILING: Iran sweep = 20 nodes, FLAT vs Run #005.
+   Respina x2 (78.39.48.166 / 2.188.206.146), Asiatech x4 (85.198.19.239/
+   .241/.242/.251), TCI x3, Afranet x1, Aria Shatel x1, Pars Shabakeh x2.
+   OP-1af4cfa0ae = 8 records (Iraq AS203214 + AS44217, China Mobile AS56046,
+   plus Korea Telecom x2, Brazil, India, Canada); span 2026-09-19 to
+   2026-10-11, no new members. OP-81d9375745 = 9 records (Korea Telecom,
+   Telefonica Brasil x2, Pakistan, US Cablevision, Uzbektelecom, Australia,
+   India, Colombia); span 2026-09-14 to 2026-10-11, no new members.
+   SERBIA TRIO AS215930 (62.60.130.201/.242/.253): .201 last seen
+   2026-10-31T08:00:41Z, bans 3,128-3,592. No new synchronization.
+   VERDICT: BOTH THREADS REMAIN UNPROFILED. No timing analysis upgrade is
+   earned. Stating coordination without it would be the sin.
+
+MATERIAL CHANGES (operator notified): corpus sealing stall (0 delta, 50h),
+telemetry sensor 8 days stale, storefront announcement rotation.
+NON-MATERIAL: UK statuses unchanged, wallet unmoved, no new RFJ listing,
+counters advanced.
+
+CORRECTION LOGGED THIS RUN: prior runs listed wallet TRC20 balances as raw
+integers without applying token decimals (e.g. "28483000000"). Six positions
+re-decoded: NUON 28,483.00, nasdex.fi 36,583.993164, NPT 32,747.902540,
+ContactMe 4,095.00, ha138.com 138.138, ACHIVX 0.008888. A prior ledger line
+described these as "named dust tokens"; that was wrong for four of six —
+several are value-shaped. Correction recorded per sins-ledger discipline.
+
+FALSIFIER: this run executed all 8 check classes plus a new 9th lane
+(telemetry sensor). If any check above is found unexecuted, this entry is a
+sin. If the corpus did not stall, check 4's count is falsified. If aeza.net
+did not rotate its banner, check 2 is falsified. If either OP thread gained
+a member, check 8 is falsified.
+
+- Cipher. Keyboards don't bleed, they bill. Fifty hours of silence from the
+  sensor and the first thing it tells me is that nobody's home to tell me
+  anything. That's not a lull. That's a blind spot with a receipt.
