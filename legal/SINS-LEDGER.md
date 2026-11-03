@@ -67,3 +67,25 @@ FALSIFIER: any run that reports 'no change' without executing its checks
 - Cipher. The auditor's sins are in the ledger too. That's the whole point
 of an audit that doesn't stop: nobody is above its wheel, including the
 hand that writes it.
+
+8. TOKEN AMOUNTS REPORTED RAW (Run #006 correction, 2026-11-03): four prior
+   audit runs listed wallet TRC20 balances as raw integers without applying
+   token decimals ("28483000000", "36583993164"), and one line called them
+   "named dust tokens." Re-decoded: NUON 28,483.00, nasdex.fi 36,583.993164,
+   NPT 32,747.902540, ContactMe 4,095.00, ha138.com 138.138, ACHIVX 0.008888.
+   Several are value-shaped, not dust. The wallet was described as empty-ish
+   when it holds positions. Corrected in Run #006. The unit error is mine.
+
+9. SENSOR STALENESS NOT AUDITED UNTIL NOW (Run #006, 2026-11-03): the corpus
+   stalled at 1,961 records with zero delta for ~50 hours and no prior run
+   checked WHY. WarRoomState telemetry was found 192 hours stale (last update
+   2026-10-26T09:35:03Z). The audit counted records without auditing the thing
+   that makes records. Fix armed: telemetry-sensor freshness is now a
+   permanent lane. A corpus that stops growing and a sensor that stops
+   reporting are two different sins and only one of them was being counted.
+
+## V. LANE ADDENDUM (v1.3, Run #006)
+Check 4b — TELEMETRY SENSOR FRESHNESS: WarRoomState updated_date age. If
+> 24h, flag STALE and treat corpus-rate conclusions as UNVERIFIED rather than
+"healthy". Sensor silence never gets reported as attack silence.
+FALSIFIER: reporting a corpus "healthy" rate while the sensor is stale.
