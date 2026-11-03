@@ -16,6 +16,13 @@ signal found in Oct 2026 coverage. NO BOARD CHANGE DETECTED within
 executed verification; browser-based full pagination re-scan remains
 queued. for next run (honest note: deep-page presence of
 the nine below is carried per the 10-13 full scan, not re-pulled tonight).
+Re-checked 2026-11-03 by Eternal Audit Run #006: curl lane served HTTP 500-with-content
+AGAIN (second consecutive run, WordPress critical error visible in body) — so the lane was
+ESCALATED TO A REAL BROWSER and the check was genuinely executed. Board renders: newest =
+Zhang Yu (SSSB) 2026-10-07; then IRGC-ASF (09-28), Amir Yaryab (09-02), Obaidullah (08-24),
+the Aug 17 cluster (Ghal'eh-Kuhi, Mesri, Shahbazi Balujeh, Ghareh Blagh, Kahzadian), Jomadi
+Logistics (07-28). All page-1 names match baseline. NO NEW CYBER LISTING DETECTED.
+Deep pagination of the nine tracked names remains carried per the 10-13 full scan (honest note).
 
 ## THE BOARD (as listed 2026-10-11)
 EUROPE/EURASIA: Andrey Stanislavovich KORINETS; Ruslan Aleksandrovich
